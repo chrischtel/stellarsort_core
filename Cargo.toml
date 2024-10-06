@@ -1,0 +1,13 @@
+[package]
+name = "stellarsort_core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+image = "*"
+imageproc = "*"
+rayon = "*"         # Optional: Für parallele Verarbeitung
+thiserror = "*"     # Optional: Für benutzerdefinierte Fehler
+log = "*"           # Optional: Für Logging
+env_logger = "*"   # Optional: Für Logging-Implementierung
+indicatif = "*"
