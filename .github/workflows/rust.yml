@@ -2,9 +2,13 @@ name: Rust CI
 
 on:
   push:
+    tags:
+      - "v*.*.*" 
     branches:
       - master  # Triggers on pushes to the 'main' branch
   pull_request:
+    tags:
+      - "v*.*.*" 
     branches:
       - master  # Triggers on pull requests to the 'main' branch
 
