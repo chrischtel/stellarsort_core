@@ -15,11 +15,8 @@
   <a href="https://docs.rs/stellarsort_core">
     <img src="https://docs.rs/stellarsort_core/badge.svg" alt="Documentation">
   </a>
-  <a href="https://github.com/chrischtel/stellarsort/actions">
-    <img src="https://github.com/yourusername/stellarsort_core/workflows/CI/badge.svg" alt="Build Status">
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/github/license/chrischtel/stellarsort" alt="License">
+  <a href="Build">
+    <img src="https://github.com/chrischtel/stellarsort_core/actions/workflows/rust.yml/badge.svg" alt="License">
   </a>
 
 
