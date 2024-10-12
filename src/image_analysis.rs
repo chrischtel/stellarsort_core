@@ -2,14 +2,13 @@ use image::DynamicImage;
 use imageproc::filter::{laplacian_filter, gaussian_blur_f32};
 use thiserror::Error;
 use log::{info, warn, error};
-use rayon::prelude::*;
 
 /// Benutzerdefinierter Fehler für die Bildanalyse
 #[derive(Error, Debug)]
 pub enum ImageAnalysisError {
     #[error("Fehler beim Laden des Bildes: {0}")]
     ImageLoadError(String),
-    
+
     #[error("Unbekannter Fehler")]
     Unknown,
 }

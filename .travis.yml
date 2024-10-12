@@ -1,0 +1,34 @@
+language: rust
+
+# Specify Rust versions to test against
+rust:
+  - stable
+  - beta
+  - nightly
+
+# Only deploy on tagged releases
+if: tag IS present
+
+# Build and test the project
+script:
+  - cargo build --release
+  - cargo test --verbose
+
+# Deploy to GitHub Releases
+deploy:
+  - provider: releases
+    api_key: $GITHUB_TOKEN
+    file: target/release/your_binary_name*
+    skip_cleanup: true
+    on:
+      tags: true
+      condition: $TRAVIS_RUST_VERSION = stable
+
+# Deploy to Crates.io
+  - provider: script
+    script: cargo publish --token $CARGO_R_TOKEN
+    skip_cleanup: true
+    on:
+      tags: true
+      condition: $TRAVIS_RUST_VERSION = stable
+
